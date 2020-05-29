@@ -13,6 +13,7 @@ def main():
     parser.add_argument('configuration', type=argparse.FileType('r'), help='JSON configuration file path')
     parser.add_argument('source', type=argparse.FileType('wb'), help='output source file path')
     parser.add_argument('header', type=argparse.FileType('wb'), help='output header file path')
+    parser.add_argument('-header_config', type=argparse.FileType('wb'), help='output configuration header file path')
     parser.add_argument('-schema', help='JSON validation schema file path')
     parser.add_argument('-template_directory', type=str, default=os.getcwd(), help='jinja2 template directory')
 
@@ -28,6 +29,8 @@ def main():
 
     args.source.write(code_generator.source.encode())
     args.header.write(code_generator.header.encode())
+    if args.header_config:
+        args.header_config.write(code_generator.header_config.encode())
 
 
 if __name__ == '__main__':

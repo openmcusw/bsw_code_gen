@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='bsw_code_gen',
-    version='0.1.0',
+    version='0.1.1',
     packages=['bsw_code_gen'],
     url='https://github.com/openmcusw/bsw_code_gen',
     license='BSD-2',

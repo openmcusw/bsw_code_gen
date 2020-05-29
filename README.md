@@ -12,5 +12,5 @@ According to Autosar standard, the following files might be generated:
 - **\<ModuleName\>_PBcfg.h**
 
 To enforce a consistent file naming across all modules, the package will look for a jinja2 template named 
-**source.c.jinja2** to generate the file **\<ModuleName>.c**, **header_cfg.h.jinja2** to generate the file 
-**\<ModuleName>_Cfg.h** and so on.
+**source.c.jinja2** to generate the file **\<ModuleName>.c**, **header.h.jinja2** to generate the file 
+**\<ModuleName>.h**, **config.h.jinja2** to generate the file **\<ModuleName>_Cfg.h** and so on.
