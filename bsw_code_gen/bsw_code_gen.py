@@ -21,6 +21,11 @@ class BSWCodeGen(object):
         return template.render(**self.config)
 
     @property
+    def source_config(self):
+        template = self.environment.get_template('config.c.jinja2')
+        return template.render(**self.config)
+
+    @property
     def header_config(self):
         template = self.environment.get_template('config.h.jinja2')
         return template.render(**self.config)
