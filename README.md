@@ -1,6 +1,6 @@
 # Package description
 The purpose of this package is to provide a generic way to generate code across all BSW modules.
-It might be invoked from the command line (see ```bsw_code_gen --help```) or imported as a package from an other script.
+It might be invoked from the command line (see ```bsw_code_gen --help```) or imported as a package from another script.
 
 # Required structure
 According to Autosar standard, the following files might be generated:
