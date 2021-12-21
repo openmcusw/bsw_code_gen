@@ -15,6 +15,12 @@ def main():
     parser.add_argument('header', type=argparse.FileType('wb'), help='output header file path')
     parser.add_argument('-source_config', type=argparse.FileType('wb'), help='output configuration source file path')
     parser.add_argument('-header_config', type=argparse.FileType('wb'), help='output configuration header file path')
+    parser.add_argument('-source_post_build_config',
+                        type=argparse.FileType('wb'),
+                        help='output post-build configuration source file path')
+    parser.add_argument('-header_post_build_config',
+                        type=argparse.FileType('wb'),
+                        help='output post-build configuration header file path')
     parser.add_argument('-schema', help='JSON validation schema file path')
     parser.add_argument('-template_directory', type=str, default=os.getcwd(), help='jinja2 template directory')
 
@@ -34,6 +40,10 @@ def main():
         args.source_config.write(code_generator.source_config.encode())
     if args.header_config:
         args.header_config.write(code_generator.header_config.encode())
+    if args.source_post_build_config:
+        args.source_post_build_config.write(code_generator.source_post_build_config.encode())
+    if args.header_post_build_config:
+        args.header_post_build_config.write(code_generator.header_post_build_config.encode())
 
 
 if __name__ == '__main__':
