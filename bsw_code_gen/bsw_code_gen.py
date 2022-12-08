@@ -21,21 +21,31 @@ class BSWCodeGen(object):
         return template.render(**self.config)
 
     @property
-    def source_config(self):
-        template = self.environment.get_template('config.c.jinja2')
+    def source_cfg(self):
+        template = self.environment.get_template('source_cfg.c.jinja2')
         return template.render(**self.config)
 
     @property
-    def header_config(self):
-        template = self.environment.get_template('config.h.jinja2')
+    def header_cfg(self):
+        template = self.environment.get_template('header_cfg.h.jinja2')
         return template.render(**self.config)
 
     @property
-    def source_post_build_config(self):
-        template = self.environment.get_template('post_build_config.c.jinja2')
+    def source_pb_cfg(self):
+        template = self.environment.get_template('source_pb_cfg.c.jinja2')
         return template.render(**self.config)
 
     @property
-    def header_post_build_config(self):
-        template = self.environment.get_template('post_build_config.h.jinja2')
+    def header_pb_cfg(self):
+        template = self.environment.get_template('header_pb_cfg.h.jinja2')
+        return template.render(**self.config)
+
+    @property
+    def source_rt(self):
+        template = self.environment.get_template('source_rt.c.jinja2')
+        return template.render(**self.config)
+
+    @property
+    def header_rt(self):
+        template = self.environment.get_template('header_rt.h.jinja2')
         return template.render(**self.config)
