@@ -1,7 +1,7 @@
 import argparse
 import os
 
-from .bsw_code_gen import BSWCodeGen
+from .generator import BSWCodeGen
 from json import load
 from jsonschema import validate
 
