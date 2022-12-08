@@ -2,9 +2,6 @@ import os.path
 
 from setuptools import setup
 
-with open(os.path.abspath(os.path.join(os.path.dirname(__file__), 'requirements.txt')), 'r') as fp:
-    install_requires = fp.read().splitlines()
-
 with open(os.path.abspath(os.path.join(os.path.dirname(__file__), 'README.md')), 'r') as fp:
     long_description = fp.read()
 
@@ -21,5 +18,8 @@ setup(
     entry_points={
         'console_scripts': ['bsw_code_gen=bsw_code_gen:main']
     },
-    install_requires=install_requires,
+    install_requires=['setuptools~=57.0.0',
+                      'argparse~=1.4.0',
+                      'jsonschema~=3.0.1',
+                      'Jinja2~=2.11.3'],
 )
