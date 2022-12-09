@@ -38,8 +38,6 @@ def main():
 
     code_generator = BSWCodeGen(data, args.template_directory)
 
-    args.source_cfg.write(code_generator.source_cfg.encode())
-    args.header_cfg.write(code_generator.header_cfg.encode())
     if args.source_cfg:
         args.source_cfg.write(code_generator.source_cfg.encode())
     if args.header_cfg:

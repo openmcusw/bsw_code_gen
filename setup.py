@@ -7,7 +7,7 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__), 'README.md')),
 
 setup(
     name='bsw_code_gen',
-    version='0.1.6',
+    version='0.1.7',
     packages=['bsw_code_gen'],
     url='https://github.com/openmcusw/bsw_code_gen',
     license='BSD-2',
