@@ -42,7 +42,11 @@ def main():
         args.source_cfg.write(code_generator.source_cfg.encode())
     if args.header_cfg:
         args.header_cfg.write(code_generator.header_cfg.encode())
+    if args.source_pb_cfg:
+        args.source_pb_cfg.write(code_generator.source_pb_cfg.encode())
     if args.header_pb_cfg:
         args.header_pb_cfg.write(code_generator.header_pb_cfg.encode())
-    if args.header_pb_cfg:
-        args.header_pb_cfg.write(code_generator.header_pb_cfg.encode())
+    if args.source_rt:
+        args.source_rt.write(code_generator.source_rt.encode())
+    if args.header_rt:
+        args.header_rt.write(code_generator.header_rt.encode())
