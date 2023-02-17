@@ -7,7 +7,7 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__), 'README.md')),
 
 setup(
     name='bsw_code_gen',
-    version='0.1.8',
+    version='0.1.9',
     packages=['bsw_code_gen'],
     url='https://github.com/openmcusw/bsw_code_gen',
     license='BSD-2',
@@ -18,7 +18,7 @@ setup(
     entry_points={
         'console_scripts': ['bsw_code_gen=bsw_code_gen:main']
     },
-    install_requires=['setuptools~=57.0.0',
+    install_requires=['setuptools~=65.5.1',
                       'argparse~=1.4.0',
                       'jsonschema~=3.0.1',
                       'Jinja2~=2.11.3'],
