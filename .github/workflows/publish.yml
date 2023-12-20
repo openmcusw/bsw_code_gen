@@ -46,7 +46,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Build dist
-        run: python3 -m build
+        run: python3 -m build --sdist --wheel
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: dist
           path: dist
