@@ -1,2 +1,2 @@
 from .generator import BSWCodeGen
-from .__main__ import main
+from .main import main

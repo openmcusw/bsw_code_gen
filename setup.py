@@ -18,8 +18,8 @@ setup(
     entry_points={
         'console_scripts': ['bsw_code_gen=bsw_code_gen:main']
     },
-    install_requires=['setuptools~=65.5.1',
+    install_requires=['setuptools',
                       'argparse~=1.4.0',
-                      'jsonschema~=3.0.1',
+                      'jsonschema',
                       'Jinja2~=2.11.3'],
 )

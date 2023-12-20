@@ -1,4 +1,4 @@
 setuptools~=65.5.1
 argparse~=1.4.0
-jsonschema~=3.0.1
+jsonschema
 Jinja2~=2.11.3
