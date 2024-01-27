@@ -56,6 +56,11 @@ jobs:
     name: Publish package
     needs: [ build-distribution ]
     runs-on: ubuntu-20.04
+    environment:
+      name: pypi
+      url: https://pypi.org/p/bsw-code-gen
+    permissions:
+      id-token: write
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v3
@@ -64,6 +69,3 @@ jobs:
           path: dist
       - name: Publish package on Python Package Index
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: ${{secrets.PYPI_USERNAME}}
-          password: ${{secrets.PYPI_PASSWORD}}
