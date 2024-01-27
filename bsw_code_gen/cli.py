@@ -50,3 +50,7 @@ def main():
         args.source_rt.write(code_generator.source_rt.encode())
     if args.header_rt:
         args.header_rt.write(code_generator.header_rt.encode())
+
+
+if __name__ == '__main__':
+    main()
