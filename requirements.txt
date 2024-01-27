@@ -1,4 +1,4 @@
-setuptools~=65.5.1
-argparse~=1.4.0
+setuptools
+argparse
 jsonschema
-Jinja2~=2.11.3
+Jinja2
